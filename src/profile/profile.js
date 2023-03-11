@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Profile = (props) => {
-    const click = e =>{
-        alert(`Hi ${props.name}`)
+const Profile = ({name , img , bio , profession,Click}) => {
+    const handleClick = e =>{
+        e.preventDefault();
+        Click(name)
       }
     return <div>
-        <div> {props.children}</div>
-        <h1> Hi my Name is <a onClick={click} style={{}}>{props.name}</a></h1>
-        <h2> {props.bio}</h2>
-        <h3> I work as a {props.profession}</h3>
+        <img src={img}></img>
+        <h1> Hi my Name is <a onClick={handleClick} style={{}}>{name}</a></h1>
+        <h2> {bio}</h2>
+        <h3> I work as a {profession}</h3>
     </div>
 }
 

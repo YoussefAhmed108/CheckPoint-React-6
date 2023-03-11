@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Profile from './profile/profile';
 function App() {
-
+  const Click = (text) =>{
+    alert(text)
+  }
   
 
   return (
@@ -22,7 +24,7 @@ function App() {
         </a>
 
 
-        <Profile> <img src="/img.jpg"></img></Profile>
+        <Profile name="Youssef" img="./img.jpg" bio="I am 20 years old" profession="enginner" Click={Click}></Profile>
       </header>
     </div>
   );
